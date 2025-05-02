@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rockstar Games Purchase Calculator</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #121212; color: white; text-align: center; }
+        .container { max-width: 400px; margin: 50px auto; padding: 20px; background: #222; border-radius: 10px; }
+        h1 { color: #FFD700; }
+        label { display: block; margin-top: 10px; text-align: left; }
+        select, input { width: 100%; padding: 10px; margin-top: 5px; background: #333; color: white; border: none; border-radius: 5px; }
+        button { background: #FFD700; color: black; padding: 10px; border: none; border-radius: 5px; cursor: pointer; margin-top: 20px; width: 100%; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ROCKSTAR GAMES PURCHASE CALCULATOR</h1>
+        <label for="game">Select Game:</label>
+        <select id="game">
+            <option value="" disabled selected>-- Select a Game --</option>7
+            <option value="30">GTA V ($30)</option>
+            <option value="50">Red Dead Redemption 2 ($50)</option>
+            <option value="20">Max Payne 3 ($20)</option>
+            <option value="25">L.A. Noire ($25)</option>
+        </select>
+        
+        <label for="platform">Select Platform:</label>
+        <select id="platform">
+            <option>PC</option>
+            <option>Xbox Series X|S</option>
+            <option>PlayStation 5</option>
+        </select>
+        
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" min="1" value="1">
+        
+        <label for="currency">Currency:</label>
+        <select id="currency">
+            <option value="USD">USD ($)</option>
+            <option value="EUR">EUR (€)</option>
+            <option value="GBP">GBP (£)</option>
+        </select>
+        
+        <label for="payment">Payment Method:</label>
+        <select id="payment">
+            <option>Credit Card</option>
+            <option>PayPal</option>
+            <option>Cryptocurrency</option>
+        </select>
+        
+        <label for="promo">Promo Code (Optional):</label>
+        <input type="text" id="promo" placeholder="Enter promo code">
+        
+        <button onclick="calculateTotal()">CALCULATE PURCHASE</button>
+        
+        <h2>Total: <span id="total">$0</span></h2>
+    </div>
+
+    <script>
+        function calculateTotal() {
+            const gamePrice = parseFloat(document.getElementById("game").value) || 0;
+            const quantity = parseInt(document.getElementById("quantity").value) || 1;
+            let total = gamePrice * quantity;
+            
+            const promoCode = document.getElementById("promo").value.trim();
+            if (promoCode === "DISCOUNT10") {
+                total *= 0.9; // Apply 10% discount
+            }
+            
+            document.getElementById("total").textContent = "$" + total.toFixed(2);
+        }
+    </script>
+</body>
+</html>

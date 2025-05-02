@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rockstar Games</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header, footer {
+            background-color: rgb(246, 183, 25);
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+            border: 2px solid black;
+        }
+        nav {
+            text-align: center;
+            background-color: lightblue;
+            padding: 15px;
+            width: 100%;
+            border: 2px solid black;
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        main {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            padding: 20px;
+            width: 100%;
+        }
+        section, article {
+            background-color: rgb(226, 230, 208);
+            padding: 20px;
+            margin-right: 20px;
+            flex: 2;
+            border: 2px solid rgb(0, 0, 0);
+            padding-right: 800px;
+            padding-bottom: 100px;
+            margin-bottom: 10px;
+        }
+        article {
+            background-color: rgb(239, 239, 179);
+            padding-right: 800px;
+        }
+        aside {
+            background-color: rgb(247, 48, 30);
+            padding: 20px;
+            flex: 1;
+            border: 2px solid black;
+        }
+        h3 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="font-family: 'Times New Roman', Times, serif;">Rockstar Games</h1>
+    </header>
+        <nav>
+        <a href="#">Home</a>
+        <a href="#">Games</a>
+        <a href="#">News</a>
+        <a href="#">Reviews</a>
+    </nav>
+    <main>
+        <div>
+            <section>
+                <h3>Featured Games</h3>
+                <div class="game-card">
+                    <div class="content">
+                        <h4>Red Dead Redemption 2</h4>
+                        <p>Explore an immersive open-world experience with stunning graphics and gripping gameplay.</p>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <div class="content">
+                        <h4>Grand Theft Auto VI</h4>
+                        <p>Join forces with friends in this action-packed multiplayer adventure.</p>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <div class="content">
+                        <h4>Oni</h4>
+                        <p>Experience the thrill of competitive play in this fast-paced FPS.</p>
+                    </div>
+                </div>
+            </section>
+            <article>
+                <h3>Latest News</h3>
+                <p>Stay updated on the newest gaming trends and releases.</p>
+                <ul>
+                    <li><strong>New DLC for 'Red Dead Redemption 2'!</strong> Explore new content and challenges in the latest expansion.</li>
+                    <li><strong>'Grand Theft Auto VI' Breaks Sales Records</strong> The latest multiplayer game has taken the world by storm.</li>
+                    <li><strong>Upcoming Titles</strong> Get ready for next-gen gaming with these highly anticipated releases.</li>
+                </ul>
+            </article>
+        </div>
+        <aside>
+            <h3>Trending</h3>
+            <ul>
+                <li><strong>Red Dead Redemption 2</strong> - A gripping story mode with co-op multiplayer!</li>
+                <li><strong>Grand Theft Auto V</strong> - Open World like never before.</li>
+                <li><strong>Grand Theft Auto IV</strong> - Impressive story line</li>
+            </ul>
+        </aside>
+    </main>
+    <footer>
+        <p>&copy; 2025 Rockstar Games. All rights reserved.</p>
+    </footer>
+</body>
+</html>
